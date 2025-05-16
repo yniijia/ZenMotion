@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ZenMotion</title>
+  <link href="../css/popup.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <style>
+    .debug-section {
+      width: 100%;
+      margin-top: 15px;
+      padding-top: 15px;
+      border-top: 1px solid rgba(80, 102, 119, 0.1);
+      font-size: 12px;
+    }
+    .debug-section h3 {
+      margin: 5px 0;
+      font-size: 14px;
+    }
+    .debug-info {
+      background-color: #f5f7fa;
+      padding: 8px;
+      border-radius: 4px;
+      margin-top: 8px;
+      max-height: 80px;
+      overflow-y: auto;
+      font-family: monospace;
+      font-size: 11px;
+    }
+    .debug-button {
+      background-color: #3a4f63;
+      color: white;
+      border: none;
+      padding: 5px 10px;
+      border-radius: 4px;
+      font-size: 12px;
+      cursor: pointer;
+      margin-top: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>ZenMotion</h1>
+    
+    <div class="toggle-container">
+      <div id="toggle-button" class="toggle-button">
+        <div class="toggle-circle"></div>
+      </div>
+      <div id="status-text">Inactive</div>
+      <div id="last-movement"></div>
+    </div>
+    
+    <div class="settings-section">
+      <h2>Settings</h2>
+      <div class="setting-row">
+        <label for="interval-slider">Movement Interval:</label>
+        <input type="range" id="interval-slider" min="5" max="120" step="5" value="30">
+        <span id="interval-value">30s</span>
+      </div>
+    </div>
+    
+    <div class="debug-section">
+      <h3>Troubleshooting</h3>
+      <button id="force-movement" class="debug-button">Force Movement Now</button>
+      <div id="debug-info" class="debug-info">No debug info available</div>
+    </div>
+  </div>
+  
+  <script src="../js/popup.js"></script>
+</body>
+</html>
