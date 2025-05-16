@@ -1,0 +1,20 @@
+{
+  "name": "zenmotion",
+  "version": "2.05.25",
+  "description": "Chrome extension that simulates mouse movements to keep screens active",
+  "private": true,
+  "author": "yniijia",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yniijia/ZenMotion.git"
+  },
+  "scripts": {
+    "generate-icons": "node src/utils/generate-icons.js",
+    "package": "zip -r zenmotion.zip manifest.json src/ activate-mac-helper.command"
+  },
+  "devDependencies": {
+    "canvas": "^2.11.0",
+    "sharp": "^0.32.1"
+  }
+}
